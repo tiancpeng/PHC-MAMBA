@@ -7,7 +7,7 @@ class setting_config:
     """
     the config of training setting.
     """
-    network = 'UltraLight_VM_UNet'
+    network = 'PHC_MAMBA'
     model_config = {
         'num_classes': 1,
         'input_channels': 3,
