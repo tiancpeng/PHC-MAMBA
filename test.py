@@ -4,7 +4,7 @@ from torch.cuda.amp import autocast, GradScaler
 from torch.utils.data import DataLoader
 from loader import *
 
-from models.UltraLight_VM_UNet import UltraLight_VM_UNet
+from models.PHC-MAMBA import PHC_MAMBA
 from engine import *
 import os
 import sys
@@ -49,7 +49,7 @@ def main(config):
 
     print('#----------Prepareing Models----------#')
     model_cfg = config.model_config    
-    model = UltraLight_VM_UNet(num_classes=model_cfg['num_classes'], 
+    model = PHC_MAMBA(num_classes=model_cfg['num_classes'], 
                                input_channels=model_cfg['input_channels'], 
                                c_list=model_cfg['c_list'], 
                                split_att=model_cfg['split_att'], 
